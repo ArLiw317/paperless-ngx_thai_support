@@ -1,0 +1,273 @@
+[2025-03-01 04:38:36,867] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-01 04:41:11,873] [DEBUG] [paperless.classifier] Document classification model does not exist (yet), not performing automatic matching.
+[2025-03-01 04:41:43,428] [DEBUG] [paperless.tasks] Skipping plugin CollatePlugin
+[2025-03-01 04:41:43,439] [DEBUG] [paperless.tasks] Skipping plugin BarcodePlugin
+[2025-03-01 04:41:43,449] [DEBUG] [paperless.tasks] Executing plugin WorkflowTriggerPlugin
+[2025-03-01 04:41:43,487] [INFO] [paperless.tasks] WorkflowTriggerPlugin completed with: 
+[2025-03-01 04:41:43,501] [DEBUG] [paperless.tasks] Executing plugin ConsumeTaskPlugin
+[2025-03-01 04:41:43,569] [INFO] [paperless.consumer] Consuming WPD-025 การตรวจสอบเครื่องตัดชิ้นงาน.pdf
+[2025-03-01 04:41:43,585] [DEBUG] [paperless.consumer] Detected mime type: application/pdf
+[2025-03-01 04:41:43,609] [DEBUG] [paperless.consumer] Parser: RasterisedDocumentParser
+[2025-03-01 04:41:43,625] [DEBUG] [paperless.consumer] Parsing WPD-025 การตรวจสอบเครื่องตัดชิ้นงาน.pdf...
+[2025-03-01 04:41:43,650] [INFO] [paperless.parsing.tesseract] pdftotext exited 0
+[2025-03-01 04:41:43,803] [DEBUG] [paperless.parsing.tesseract] Calling OCRmyPDF with args: {'input_file': PosixPath('/tmp/paperless/paperless-ngxsu2ceyox/WPD-025 การตรวจสอบเครื่องตัดชิ้นงาน.pdf'), 'output_file': PosixPath('/tmp/paperless/paperless-242uddeq/archive.pdf'), 'use_threads': True, 'jobs': 16, 'language': 'eng', 'output_type': 'pdfa', 'progress_bar': False, 'color_conversion_strategy': 'RGB', 'skip_text': True, 'clean': True, 'deskew': True, 'rotate_pages': True, 'rotate_pages_threshold': 12.0, 'sidecar': PosixPath('/tmp/paperless/paperless-242uddeq/sidecar.txt')}
+[2025-03-01 04:41:44,003] [INFO] [ocrmypdf._pipeline] skipping all processing on this page
+[2025-03-01 04:41:44,022] [INFO] [ocrmypdf._pipelines.ocr] Postprocessing...
+[2025-03-01 04:41:44,240] [ERROR] [ocrmypdf._exec.ghostscript] GPL Ghostscript 10.03.1 (2024-05-02)
+Copyright (C) 2024 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+GPL Ghostscript 10.03.1: PDFDocEncoding 1 is undefined
+GPL Ghostscript 10.03.1: Text string detected in DOCINFO cannot be represented in XMP for PDF/A1, discarding DOCINFO
+GPL Ghostscript 10.03.1: PDFDocEncoding 1 is undefined
+GPL Ghostscript 10.03.1: Text string detected in DOCINFO cannot be represented in XMP for PDF/A1, discarding DOCINFO
+Processing pages 1 through 1.
+Page 1
+GPL Ghostscript 10.03.1: 
+Detected SMask which must be in DeviceGray, but we are not converting to DeviceGray, reverting to normal PDF output
+
+The following warnings were encountered at least once while processing this file:
+	The file has a bad /Info dictionary
+
+   
+[2025-03-01 04:41:44,251] [ERROR] [ocrmypdf._exec.ghostscript]  This file had errors that were repaired or ignored.
+   
+[2025-03-01 04:41:44,260] [ERROR] [ocrmypdf._exec.ghostscript]  The file was produced by: 
+   
+[2025-03-01 04:41:44,270] [ERROR] [ocrmypdf._exec.ghostscript]  >>>> Microsoft: Print To PDF <<<<
+   
+[2025-03-01 04:41:44,281] [ERROR] [ocrmypdf._exec.ghostscript]  Please notify the author of the software that produced this
+   
+[2025-03-01 04:41:44,290] [ERROR] [ocrmypdf._exec.ghostscript]  file that it does not conform to Adobe's published PDF
+   
+[2025-03-01 04:41:44,301] [ERROR] [ocrmypdf._exec.ghostscript]  specification.
+
+
+[2025-03-01 04:41:47,035] [INFO] [ocrmypdf._pipeline] Image optimization ratio: 1.04 savings: 4.0%
+[2025-03-01 04:41:47,046] [INFO] [ocrmypdf._pipeline] Total file size ratio: 1.32 savings: 24.0%
+[2025-03-01 04:41:47,060] [WARNING] [ocrmypdf._pipelines._common] Output file is a valid PDF, but conversion to PDF/A did not succeed (issue: No PDF/A metadata in XMP)
+[2025-03-01 04:41:47,075] [DEBUG] [paperless.parsing.tesseract] Incomplete sidecar file: discarding.
+[2025-03-01 04:41:47,106] [INFO] [paperless.parsing.tesseract] pdftotext exited 0
+[2025-03-01 04:41:47,114] [DEBUG] [paperless.consumer] Generating thumbnail for WPD-025 การตรวจสอบเครื่องตัดชิ้นงาน.pdf...
+[2025-03-01 04:41:47,127] [DEBUG] [paperless.parsing] Execute: convert -density 300 -scale 500x5000> -alpha remove -strip -auto-orient -define pdf:use-cropbox=true /tmp/paperless/paperless-242uddeq/archive.pdf[0] /tmp/paperless/paperless-242uddeq/convert.webp
+[2025-03-01 04:41:49,118] [INFO] [paperless.parsing] convert exited 0
+[2025-03-01 04:41:49,462] [DEBUG] [paperless.classifier] Document classification model does not exist (yet), not performing automatic matching.
+[2025-03-01 04:41:49,481] [DEBUG] [paperless.consumer] Saving record to database
+[2025-03-01 04:41:49,492] [DEBUG] [paperless.consumer] Creation date from parse_date: 2025-02-22 00:00:00+00:00
+[2025-03-01 04:41:50,456] [DEBUG] [paperless.consumer] Deleting file /tmp/paperless/paperless-ngxsu2ceyox/WPD-025 การตรวจสอบเครื่องตัดชิ้นงาน.pdf
+[2025-03-01 04:41:50,501] [DEBUG] [paperless.parsing.tesseract] Deleting directory /tmp/paperless/paperless-242uddeq
+[2025-03-01 04:41:50,515] [INFO] [paperless.consumer] Document 2025-02-22 WPD-025 การตรวจสอบเครื่องตัดชิ้นงาน consumption finished
+[2025-03-01 04:41:50,531] [INFO] [paperless.tasks] ConsumeTaskPlugin completed with: Success. New document id 1 created
+[2025-03-01 04:41:55,468] [DEBUG] [paperless.classifier] Document classification model does not exist (yet), not performing automatic matching.
+[2025-03-01 04:43:06,494] [DEBUG] [paperless.classifier] Document classification model does not exist (yet), not performing automatic matching.
+[2025-03-01 04:44:30,143] [INFO] [paperless.management.consumer] Received SIGINT, stopping inotify
+[2025-03-01 04:44:30,186] [DEBUG] [paperless.management.consumer] Consumer exiting.
+[2025-03-01 06:37:30,555] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-01 06:37:31,783] [DEBUG] [paperless.classifier] Document classification model does not exist (yet), not performing automatic matching.
+[2025-03-01 06:37:31,900] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-01 06:37:31,984] [DEBUG] [paperless.classifier] 1 documents, 1 tag(s), 0 correspondent(s), 1 document type(s). 0 storage path(s)
+[2025-03-01 06:37:32,088] [DEBUG] [paperless.classifier] Vectorizing data...
+[2025-03-01 06:37:32,567] [DEBUG] [paperless.classifier] Training tags classifier...
+[2025-03-01 06:37:32,630] [DEBUG] [paperless.classifier] There are no correspondents. Not training correspondent classifier.
+[2025-03-01 06:37:32,648] [DEBUG] [paperless.classifier] Training document type classifier...
+[2025-03-01 06:37:32,693] [DEBUG] [paperless.classifier] There are no storage paths. Not training storage path classifier.
+[2025-03-01 06:37:32,715] [INFO] [paperless.tasks] Saving updated classifier model to /usr/src/paperless/data/classification_model.pickle...
+[2025-03-01 06:42:20,757] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-01 06:43:07,285] [INFO] [paperless.management.consumer] Received SIGINT, stopping inotify
+[2025-03-01 06:43:07,322] [DEBUG] [paperless.management.consumer] Consumer exiting.
+[2025-03-02 03:00:00,895] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-02 03:00:03,537] [INFO] [paperless.sanity_checker] Sanity checker detected no issues.
+[2025-03-02 03:00:04,368] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-02 03:00:04,613] [INFO] [paperless.classifier] No updates since last training
+[2025-03-02 03:00:04,629] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-02 03:00:06,254] [INFO] [paperless.tasks] Emptying trash of all expired documents
+[2025-03-02 03:00:06,287] [INFO] [paperless.tasks] Deleted 0 documents from trash
+[2025-03-02 03:03:38,520] [INFO] [paperless.auth] Login failed for user `admin` from private IP `172.18.0.1`.
+[2025-03-02 03:05:15,809] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-02 03:05:15,831] [INFO] [paperless.classifier] No updates since last training
+[2025-03-02 03:05:15,837] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-02 03:09:42,969] [INFO] [paperless.management.consumer] Received SIGINT, stopping inotify
+[2025-03-02 03:09:43,022] [DEBUG] [paperless.management.consumer] Consumer exiting.
+[2025-03-03 09:45:22,544] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-03 09:45:25,364] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-03 09:45:25,658] [INFO] [paperless.classifier] No updates since last training
+[2025-03-03 09:45:25,665] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-03 09:45:27,111] [INFO] [paperless.tasks] Emptying trash of all expired documents
+[2025-03-03 09:45:27,145] [INFO] [paperless.tasks] Deleted 0 documents from trash
+[2025-03-04 01:05:39,356] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 01:05:39,400] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 01:05:39,409] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-04 01:05:41,116] [INFO] [paperless.tasks] Emptying trash of all expired documents
+[2025-03-04 01:05:41,138] [INFO] [paperless.tasks] Deleted 0 documents from trash
+[2025-03-04 02:05:01,301] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 02:05:01,608] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 02:05:01,628] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-04 03:05:02,057] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 03:05:02,241] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 03:05:02,258] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-04 04:05:01,072] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 04:05:01,115] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 04:05:01,123] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-04 05:05:01,572] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 05:05:01,621] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 05:05:01,630] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-04 06:05:01,610] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 06:05:01,658] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 06:05:01,670] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-04 07:05:02,101] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 07:05:02,225] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 07:05:02,235] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-04 08:05:01,601] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 08:05:01,718] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 08:05:01,729] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-04 09:05:02,184] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-04 09:05:02,239] [INFO] [paperless.classifier] No updates since last training
+[2025-03-04 09:05:02,250] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-06 07:17:10,009] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-06 07:17:13,575] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-06 07:17:13,658] [INFO] [paperless.classifier] No updates since last training
+[2025-03-06 07:17:13,678] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-06 07:17:15,910] [INFO] [paperless.tasks] Emptying trash of all expired documents
+[2025-03-06 07:17:15,941] [INFO] [paperless.tasks] Deleted 0 documents from trash
+[2025-03-07 04:06:59,526] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-07 04:07:03,645] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-07 04:07:03,816] [INFO] [paperless.classifier] No updates since last training
+[2025-03-07 04:07:03,834] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-07 04:07:05,857] [INFO] [paperless.tasks] Emptying trash of all expired documents
+[2025-03-07 04:07:05,915] [INFO] [paperless.tasks] Deleted 0 documents from trash
+[2025-03-07 05:05:18,424] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-07 05:05:18,532] [INFO] [paperless.classifier] No updates since last training
+[2025-03-07 05:05:18,552] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-07 06:05:17,326] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-07 06:05:17,433] [INFO] [paperless.classifier] No updates since last training
+[2025-03-07 06:05:17,458] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-07 07:05:18,122] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-07 07:05:18,188] [INFO] [paperless.classifier] No updates since last training
+[2025-03-07 07:05:18,208] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-07 08:05:18,054] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-07 08:05:18,093] [INFO] [paperless.classifier] No updates since last training
+[2025-03-07 08:05:18,102] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-18 07:07:38,387] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-18 07:07:41,936] [INFO] [paperless.sanity_checker] Sanity checker detected no issues.
+[2025-03-18 07:07:42,825] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-18 07:07:42,906] [INFO] [paperless.classifier] No updates since last training
+[2025-03-18 07:07:42,923] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-18 07:07:45,752] [INFO] [paperless.tasks] Emptying trash of all expired documents
+[2025-03-18 07:07:45,794] [INFO] [paperless.tasks] Deleted 0 documents from trash
+[2025-03-18 08:05:16,349] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-18 08:05:16,577] [DEBUG] [paperless.classifier] 1 documents, 1 tag(s), 0 correspondent(s), 1 document type(s). 0 storage path(s)
+[2025-03-18 08:05:16,622] [DEBUG] [paperless.classifier] Vectorizing data...
+[2025-03-18 08:05:17,466] [DEBUG] [paperless.classifier] Training tags classifier...
+[2025-03-18 08:05:17,599] [DEBUG] [paperless.classifier] There are no correspondents. Not training correspondent classifier.
+[2025-03-18 08:05:17,605] [DEBUG] [paperless.classifier] Training document type classifier...
+[2025-03-18 08:05:17,653] [DEBUG] [paperless.classifier] There are no storage paths. Not training storage path classifier.
+[2025-03-18 08:05:17,670] [INFO] [paperless.tasks] Saving updated classifier model to /usr/src/paperless/data/classification_model.pickle...
+[2025-03-18 09:05:19,336] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-18 09:05:19,404] [INFO] [paperless.classifier] No updates since last training
+[2025-03-18 09:05:19,414] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-24 01:18:08,658] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-24 01:18:12,168] [INFO] [paperless.sanity_checker] Sanity checker detected no issues.
+[2025-03-24 01:18:13,261] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-24 01:18:13,414] [INFO] [paperless.classifier] No updates since last training
+[2025-03-24 01:18:13,435] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-24 01:18:16,286] [INFO] [paperless.tasks] Emptying trash of all expired documents
+[2025-03-24 01:18:16,338] [INFO] [paperless.tasks] Deleted 0 documents from trash
+[2025-03-24 01:22:20,630] [INFO] [paperless.management.consumer] Received SIGINT, stopping inotify
+[2025-03-24 01:22:20,684] [DEBUG] [paperless.management.consumer] Consumer exiting.
+[2025-03-24 01:28:57,189] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-24 01:29:23,780] [INFO] [paperless.auth] Login failed for user `demo` from private IP `172.18.0.1`.
+[2025-03-24 01:33:01,470] [INFO] [paperless.management.consumer] Received SIGINT, stopping inotify
+[2025-03-24 01:33:01,521] [DEBUG] [paperless.management.consumer] Consumer exiting.
+[2025-03-24 02:45:54,159] [INFO] [paperless.management.consumer] Using inotify to watch directory for changes: /usr/src/paperless/consume
+[2025-03-24 02:45:56,614] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-24 02:45:56,953] [INFO] [paperless.classifier] No updates since last training
+[2025-03-24 02:45:56,967] [DEBUG] [paperless.tasks] Training data unchanged.
+[2025-03-24 02:57:54,357] [DEBUG] [paperless.tasks] Skipping plugin CollatePlugin
+[2025-03-24 02:57:54,367] [DEBUG] [paperless.tasks] Skipping plugin BarcodePlugin
+[2025-03-24 02:57:54,400] [DEBUG] [paperless.tasks] Executing plugin WorkflowTriggerPlugin
+[2025-03-24 02:57:54,662] [INFO] [paperless.matching] Document matched WorkflowTrigger 2 from Workflow: Applove
+[2025-03-24 02:57:54,806] [INFO] [paperless.tasks] WorkflowTriggerPlugin completed with: Applying WorkflowAction 1 from Workflow: Applove
+[2025-03-24 02:57:54,816] [DEBUG] [paperless.tasks] Executing plugin ConsumeTaskPlugin
+[2025-03-24 02:57:54,885] [INFO] [paperless.consumer] Consuming TV.pdf
+[2025-03-24 02:57:54,897] [DEBUG] [paperless.consumer] Detected mime type: application/pdf
+[2025-03-24 02:57:54,918] [DEBUG] [paperless.consumer] Parser: RasterisedDocumentParser
+[2025-03-24 02:57:54,932] [DEBUG] [paperless.consumer] Parsing TV.pdf...
+[2025-03-24 02:57:55,032] [INFO] [paperless.parsing.tesseract] pdftotext exited 0
+[2025-03-24 02:57:55,280] [DEBUG] [paperless.parsing.tesseract] Calling OCRmyPDF with args: {'input_file': PosixPath('/tmp/paperless/paperless-ngxrjigqebo/TV.pdf'), 'output_file': PosixPath('/tmp/paperless/paperless-gwt0k0k6/archive.pdf'), 'use_threads': True, 'jobs': 16, 'language': 'eng', 'output_type': 'pdfa', 'progress_bar': False, 'color_conversion_strategy': 'RGB', 'skip_text': True, 'clean': True, 'deskew': True, 'rotate_pages': True, 'rotate_pages_threshold': 12.0, 'sidecar': PosixPath('/tmp/paperless/paperless-gwt0k0k6/sidecar.txt')}
+[2025-03-24 02:57:55,791] [INFO] [ocrmypdf._pipelines.ocr] Start processing 2 pages concurrently
+[2025-03-24 02:57:55,804] [INFO] [ocrmypdf._pipeline] skipping all processing on this page
+[2025-03-24 02:57:55,804] [INFO] [ocrmypdf._pipeline] skipping all processing on this page
+[2025-03-24 02:57:55,830] [INFO] [ocrmypdf._pipelines.ocr] Postprocessing...
+[2025-03-24 02:57:57,403] [INFO] [ocrmypdf._pipeline] Image optimization ratio: 1.45 savings: 31.1%
+[2025-03-24 02:57:57,418] [INFO] [ocrmypdf._pipeline] Total file size ratio: 1.50 savings: 33.4%
+[2025-03-24 02:57:57,440] [INFO] [ocrmypdf._pipelines._common] Output file is a PDF/A-2B (as expected)
+[2025-03-24 02:57:58,243] [DEBUG] [paperless.parsing.tesseract] Incomplete sidecar file: discarding.
+[2025-03-24 02:57:58,329] [INFO] [paperless.parsing.tesseract] pdftotext exited 0
+[2025-03-24 02:57:58,339] [DEBUG] [paperless.consumer] Generating thumbnail for TV.pdf...
+[2025-03-24 02:57:58,372] [DEBUG] [paperless.parsing] Execute: convert -density 300 -scale 500x5000> -alpha remove -strip -auto-orient -define pdf:use-cropbox=true /tmp/paperless/paperless-gwt0k0k6/archive.pdf[0] /tmp/paperless/paperless-gwt0k0k6/convert.webp
+[2025-03-24 02:57:59,451] [INFO] [paperless.parsing] convert exited 0
+[2025-03-24 02:57:59,668] [DEBUG] [paperless.consumer] Saving record to database
+[2025-03-24 02:57:59,691] [DEBUG] [paperless.consumer] Creation date from st_mtime: 2025-03-24 02:57:53+00:00
+[2025-03-24 02:58:02,744] [INFO] [paperless.handlers] Assigning document type WORK INSTRUCTION to 2025-03-24 ให้พิมพ์เอกสารนี้และส่งต่อ
+[2025-03-24 02:58:02,783] [INFO] [paperless.handlers] Tagging "2025-03-24 ให้พิมพ์เอกสารนี้และส่งต่อ" with "PD"
+[2025-03-24 02:58:03,460] [INFO] [paperless.matching] Document matched WorkflowTrigger 1 from Workflow: Applove
+[2025-03-24 02:58:03,468] [INFO] [paperless.handlers] Applying WorkflowAction 1 from Workflow: Applove
+[2025-03-24 02:58:03,717] [DEBUG] [paperless.consumer] Deleting file /tmp/paperless/paperless-ngxrjigqebo/TV.pdf
+[2025-03-24 02:58:03,757] [DEBUG] [paperless.parsing.tesseract] Deleting directory /tmp/paperless/paperless-gwt0k0k6
+[2025-03-24 02:58:03,772] [INFO] [paperless.consumer] Document 2025-03-24 ให้พิมพ์เอกสารนี้และส่งต่อ consumption finished
+[2025-03-24 02:58:03,789] [INFO] [paperless.tasks] ConsumeTaskPlugin completed with: Success. New document id 2 created
+[2025-03-24 03:03:10,301] [DEBUG] [paperless.tasks] Skipping plugin CollatePlugin
+[2025-03-24 03:03:10,309] [DEBUG] [paperless.tasks] Skipping plugin BarcodePlugin
+[2025-03-24 03:03:10,353] [DEBUG] [paperless.tasks] Executing plugin WorkflowTriggerPlugin
+[2025-03-24 03:03:10,668] [INFO] [paperless.matching] Document matched WorkflowTrigger 2 from Workflow: Applove
+[2025-03-24 03:03:10,787] [INFO] [paperless.tasks] WorkflowTriggerPlugin completed with: Applying WorkflowAction 2 from Workflow: Applove
+[2025-03-24 03:03:10,836] [DEBUG] [paperless.tasks] Executing plugin ConsumeTaskPlugin
+[2025-03-24 03:03:10,939] [ERROR] [paperless.consumer] Not consuming TV.pdf: It is a duplicate of ให้พิมพ์เอกสารนี้และส่งต่อ (#2).
+[2025-03-24 03:03:10,946] [ERROR] [paperless.tasks] ConsumeTaskPlugin failed: TV.pdf: Not consuming TV.pdf: It is a duplicate of ให้พิมพ์เอกสารนี้และส่งต่อ (#2).
+Traceback (most recent call last):
+  File "/usr/src/paperless/src/documents/tasks.py", line 154, in consume_file
+    msg = plugin.run()
+          ^^^^^^^^^^^^
+  File "/usr/src/paperless/src/documents/consumer.py", line 370, in run
+    self.pre_check_duplicate()
+  File "/usr/src/paperless/src/documents/consumer.py", line 182, in pre_check_duplicate
+    self._fail(
+  File "/usr/src/paperless/src/documents/consumer.py", line 151, in _fail
+    raise ConsumerError(f"{self.filename}: {log_message or message}") from exception
+documents.consumer.ConsumerError: TV.pdf: Not consuming TV.pdf: It is a duplicate of ให้พิมพ์เอกสารนี้และส่งต่อ (#2).
+[2025-03-24 03:03:25,716] [DEBUG] [paperless.tasks] Skipping plugin CollatePlugin
+[2025-03-24 03:03:25,730] [DEBUG] [paperless.tasks] Skipping plugin BarcodePlugin
+[2025-03-24 03:03:25,762] [DEBUG] [paperless.tasks] Executing plugin WorkflowTriggerPlugin
+[2025-03-24 03:03:26,008] [INFO] [paperless.matching] Document matched WorkflowTrigger 2 from Workflow: Applove
+[2025-03-24 03:03:26,079] [INFO] [paperless.tasks] WorkflowTriggerPlugin completed with: Applying WorkflowAction 2 from Workflow: Applove
+[2025-03-24 03:03:26,089] [DEBUG] [paperless.tasks] Executing plugin ConsumeTaskPlugin
+[2025-03-24 03:03:26,133] [INFO] [paperless.consumer] Consuming TV_signe.pdf
+[2025-03-24 03:03:26,146] [DEBUG] [paperless.consumer] Detected mime type: application/pdf
+[2025-03-24 03:03:26,165] [DEBUG] [paperless.consumer] Parser: RasterisedDocumentParser
+[2025-03-24 03:03:26,184] [DEBUG] [paperless.consumer] Parsing TV_signe.pdf...
+[2025-03-24 03:03:26,274] [INFO] [paperless.parsing.tesseract] pdftotext exited 0
+[2025-03-24 03:03:26,484] [DEBUG] [paperless.parsing.tesseract] Calling OCRmyPDF with args: {'input_file': PosixPath('/tmp/paperless/paperless-ngxbm4s5pe4/TV_signe.pdf'), 'output_file': PosixPath('/tmp/paperless/paperless-3jkpts43/archive.pdf'), 'use_threads': True, 'jobs': 16, 'language': 'eng', 'output_type': 'pdfa', 'progress_bar': False, 'color_conversion_strategy': 'RGB', 'skip_text': True, 'clean': True, 'deskew': True, 'rotate_pages': True, 'rotate_pages_threshold': 12.0, 'sidecar': PosixPath('/tmp/paperless/paperless-3jkpts43/sidecar.txt')}
+[2025-03-24 03:03:27,142] [WARNING] [paperless.parsing.tesseract] This file is encrypted and/or signed, OCR is impossible. Using any text present in the original file.
+[2025-03-24 03:03:27,156] [DEBUG] [paperless.consumer] Generating thumbnail for TV_signe.pdf...
+[2025-03-24 03:03:27,168] [DEBUG] [paperless.parsing] Execute: convert -density 300 -scale 500x5000> -alpha remove -strip -auto-orient -define pdf:use-cropbox=true /tmp/paperless/paperless-ngxbm4s5pe4/TV_signe.pdf[0] /tmp/paperless/paperless-3jkpts43/convert.webp
+[2025-03-24 03:03:28,318] [INFO] [paperless.parsing] convert exited 0
+[2025-03-24 03:03:28,491] [DEBUG] [paperless.consumer] Saving record to database
+[2025-03-24 03:03:28,502] [DEBUG] [paperless.consumer] Creation date from st_mtime: 2025-03-24 03:03:25+00:00
+[2025-03-24 03:03:29,494] [INFO] [paperless.handlers] Assigning document type WORK INSTRUCTION to 2025-03-24 ให้พิมพ์เอกสารนี้และส่งต่อ
+[2025-03-24 03:03:29,512] [INFO] [paperless.handlers] Tagging "2025-03-24 ให้พิมพ์เอกสารนี้และส่งต่อ" with "PD"
+[2025-03-24 03:03:30,050] [INFO] [paperless.matching] Document matched WorkflowTrigger 1 from Workflow: Applove
+[2025-03-24 03:03:30,070] [INFO] [paperless.handlers] Applying WorkflowAction 2 from Workflow: Applove
+[2025-03-24 03:03:30,280] [DEBUG] [paperless.consumer] Deleting file /tmp/paperless/paperless-ngxbm4s5pe4/TV_signe.pdf
+[2025-03-24 03:03:30,350] [DEBUG] [paperless.parsing.tesseract] Deleting directory /tmp/paperless/paperless-3jkpts43
+[2025-03-24 03:03:30,369] [INFO] [paperless.consumer] Document 2025-03-24 ให้พิมพ์เอกสารนี้และส่งต่อ consumption finished
+[2025-03-24 03:03:30,399] [INFO] [paperless.tasks] ConsumeTaskPlugin completed with: Success. New document id 3 created
+[2025-03-24 03:05:16,873] [DEBUG] [paperless.classifier] Gathering data from database...
+[2025-03-24 03:05:16,938] [DEBUG] [paperless.classifier] 3 documents, 2 tag(s), 0 correspondent(s), 1 document type(s). 0 storage path(s)
+[2025-03-24 03:05:16,955] [DEBUG] [paperless.classifier] Vectorizing data...
+[2025-03-24 03:05:17,344] [DEBUG] [paperless.classifier] Training tags classifier...
+[2025-03-24 03:05:17,466] [DEBUG] [paperless.classifier] There are no correspondents. Not training correspondent classifier.
+[2025-03-24 03:05:17,518] [DEBUG] [paperless.classifier] Training document type classifier...
+[2025-03-24 03:05:17,594] [DEBUG] [paperless.classifier] There are no storage paths. Not training storage path classifier.
+[2025-03-24 03:05:17,607] [INFO] [paperless.tasks] Saving updated classifier model to /usr/src/paperless/data/classification_model.pickle...
+[2025-03-24 03:19:24,052] [INFO] [paperless.management.consumer] Received SIGINT, stopping inotify
+[2025-03-24 03:19:24,113] [DEBUG] [paperless.management.consumer] Consumer exiting.
